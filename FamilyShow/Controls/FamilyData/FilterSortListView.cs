@@ -285,7 +285,6 @@ public class Filter
         ParseLiving();
         ParseCitations();
         ParseGender();
-
     }
 
     /// <summary>

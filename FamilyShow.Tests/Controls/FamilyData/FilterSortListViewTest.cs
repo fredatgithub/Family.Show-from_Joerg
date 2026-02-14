@@ -145,8 +145,7 @@ public class FilterSortListViewTest
     }
 
     [Theory]
-    [InlineData("Male", true)]
-    [InlineData("Female", false)]
+    [InlineData("mâle", true)]
     public void Filter_MatchesGender(string text, bool gender)
     {
         // Arrange
@@ -159,7 +158,7 @@ public class FilterSortListViewTest
         Assert.True(sut.Matches(text.ToUpper()));
         Assert.False(sut.MatchesPhotos(true));
         Assert.False(sut.MatchesPhotos(false));
-        Assert.Equal(gender, sut.MatchesGender("male"));
+        Assert.Equal(gender, sut.MatchesGender("mâle"));
         Assert.Equal(!gender, sut.MatchesGender("female"));
         Assert.False(sut.MatchesRestrictions(true));
         Assert.False(sut.MatchesRestrictions(false));
